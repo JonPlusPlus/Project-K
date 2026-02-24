@@ -11,11 +11,12 @@ class DemoApp(MDApp):
         screen = Screen()
 
         # create buttons
-        btn1 = MDFlatButton(test='Hello GFG', pos_hint={'center_x': 0.5,
+        btn1 = MDFlatButton(text='Hello GFG', pos_hint={'center_x': 0.5,
                                                         'center_y': 0.8})
         btn = MDFloatingActionButton(icon="android",
                                      pos_hint={'center_x': 0.5,
-                                               'center_y': 0.5},)
+                                               'center_y': 0.5},
+                                     )
 
         # add buttons
         screen.add_widget(btn1)
