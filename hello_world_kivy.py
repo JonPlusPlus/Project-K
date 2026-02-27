@@ -11,3 +11,4 @@ class MyFirstKivyApp(App):
         return Label(text="Hello World!")
 
   
+MyFirstKivyApp().run()
