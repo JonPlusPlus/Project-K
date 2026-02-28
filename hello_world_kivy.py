@@ -11,4 +11,5 @@ class MyFirstKivyApp(App):
         return Label(text="Hello World!")
 
   
-MyFirstKivyApp().run()
+if __name__ == '__main__':
+    MyFirstKivyApp().run()
