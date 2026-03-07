@@ -1,0 +1,22 @@
+# mywidget.kv
+<MyWidget>:
+    # -------------------------------------------------
+    # Visual hierarchy – completely declarative
+    # -------------------------------------------------
+    orientation: 'vertical'
+    padding: dp(20)
+    spacing: dp(15)
+
+    # A label that will display a value coming from Python
+    Label:
+        id: value_label          # give it an id for easy reference
+        text: root.display_text  # bind to a Python StringProperty
+        font_size: '24sp'
+        color: 0.2, 0.2, 0.2, 1
+
+    # A button that triggers a Python method
+    Button:
+        text: 'Increase'
+        size_hint_y: None
+        height: dp(48)
+        on_release: root.increase_counter()
