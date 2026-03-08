@@ -12,6 +12,8 @@ class BasicCheckBox(Widget):
         self.add_widget(self.lbl)
         # CheckBox(pos=(150,400), active=False): creates an unchecked checkbox.
         self.chk = CheckBox(pos=(150, 400), active=False)
+            #   active: sets the initial state of the checkbox.
+            #   You can attach a callback using bind(active=callback) to detect state changes.
         # self.add_widget(...): adds widgets to the root widget.
         self.add_widget(self.chk)
 
