@@ -13,17 +13,22 @@ class DropdownTextInputExample(Widget):
         super().__init__(**kwargs)
         center_x = Window.width / 2
 
+        # TextInput displays the selected fruit.
         self.input = TextInput(text='', size_hint=(None,None), width=200, height=40,pos=(center_x - 150, Window.height - 60))
         self.add_widget(self.input)
 
+        # DropDown() manages the fruit options.
         dropdown = DropDown()
+        # Each fruit button is added manually.
         for val in ['Apple', 'Banana', 'Cherry']:
             btn = Button(text=val, size_hint_y=None, height=40)
             btn.bind(on_release=lambda btn, v=val: dropdown.select(v))
             dropdown.add_widget(btn)
 
+        # Clicking “Select Fruit” opens the dropdown.
         mainbtn = Button(text='Select Fruit', size_hint=(None,None), width=120, height=40,pos=(center_x + 60, Window.height - 60))
         mainbtn.bind(on_release=dropdown.open)
+        # On selection, chosen fruit name is shown in the TextInput.
         dropdown.bind(on_select=lambda instance, x: setattr(self.input, 'text', x))
         self.add_widget(mainbtn)
 
