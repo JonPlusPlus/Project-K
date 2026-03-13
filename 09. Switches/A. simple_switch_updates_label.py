@@ -17,6 +17,9 @@ class BasicSwitch(Widget):
         self.add_widget(self.lbl)
         # Switch(active=False): places the switch beside the label.
         self.sw = Switch(active=False, pos=(cx + 40, Window.height - 135))
+            #   active: True if the switch starts ON, False if OFF.
+            #   disabled: True to disable interaction.
+            #   size_hint, pos: use size_hint=(None,None) and pos for manual placement.
         # add_widget(): adds both widgets to the window.
         self.add_widget(self.sw)
 
